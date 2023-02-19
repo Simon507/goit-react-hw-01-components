@@ -1,6 +1,8 @@
 import PropTypes from 'prop-types';
 import { BsFillPersonLinesFill } from 'react-icons/bs';
 
+import { FriendPhoto } from './FriendListItem.styles';
+
 export const FriendListItem = ({ friend }) => {
   return (
     <>
@@ -12,12 +14,12 @@ export const FriendListItem = ({ friend }) => {
         </span>
       )}
 
-      <img
+      <FriendPhoto
         className="avatar"
         src={friend.avatar}
         alt="User avatar"
         width="48"
-      />
+      ></FriendPhoto>
       <p className="name">{friend.name}</p>
     </>
   );

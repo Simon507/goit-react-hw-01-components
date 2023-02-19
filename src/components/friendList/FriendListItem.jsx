@@ -1,12 +1,15 @@
 import PropTypes from 'prop-types';
+import { BsFillPersonLinesFill } from 'react-icons/bs';
 
 export const FriendListItem = ({ friend }) => {
   return (
     <>
       {friend.isOnline ? (
-        <span className="status">OK</span>
+        <span className="status  statusOn">OK</span>
       ) : (
-        <span className="status">NO</span>
+        <span className="status statusOff">
+          <BsFillPersonLinesFill></BsFillPersonLinesFill>
+        </span>
       )}
 
       <img

@@ -2,15 +2,22 @@ import PropTypes from 'prop-types';
 import { BsFillPersonLinesFill } from 'react-icons/bs';
 
 import { FriendPhoto } from './FriendListItem.styles';
+import { Status } from './FriendListItem.styles';
 
 export const FriendListItem = ({ friend }) => {
   return (
     <>
       {friend.isOnline ? (
-        <span className="status  statusOn">OK</span>
+        <Status className="status">
+          <BsFillPersonLinesFill
+            style={{ fill: 'green' }}
+          ></BsFillPersonLinesFill>
+        </Status>
       ) : (
-        <span className="status statusOff">
-          <BsFillPersonLinesFill></BsFillPersonLinesFill>
+        <span className="status">
+          <BsFillPersonLinesFill
+            style={{ fill: 'red' }}
+          ></BsFillPersonLinesFill>
         </span>
       )}
 
